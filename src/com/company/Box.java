@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Iterator;
+import java.util.List;
 
 public class Box<T, K, L> {
     private T id;
@@ -40,15 +41,14 @@ public class Box<T, K, L> {
         this.nomer = nomer;
     }
 
-    public static Box method() {
-        Box box1 = new Box(12, "Box-1", 899);
-        return box1;
+    public static void method(List<Box> box) {
+        System.out.println(box);
     }
 
     @Override
     public String toString() {
-        return "Box:\n" +
-                "Id:" + id +
+        return "\nBox:" +
+                "\nId:" + id +
                 "\nName:" + name +
                 "\nNomer:" + nomer;
     }
